@@ -1,131 +1,200 @@
-<!DOCTYPE html>
-<html lang="ka">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>გერმანია</title>
+  <title>გერმანიის ქვიზი</title>
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
+      font-family: "Segoe UI", sans-serif;
       background: linear-gradient(to bottom, #000000, #dd0000, #ffce00);
-      color: #ffffff;
+      color: #fff;
+      min-height: 100vh;
     }
+  
     header {
-      background-color: #000000;
-      padding: 1rem;
       text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.7);
     }
+  
     header h1 {
-      color: #ffce00;
       margin: 0;
+      color: #ffce00;
+      font-size: 2.5rem;
     }
+  
     .container {
-      max-width: 1000px;
+      max-width: 800px;
       margin: 2rem auto;
-      padding: 1.5rem;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
+  
     h2 {
       color: #ffce00;
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    .quiz {
-      margin-top: 2rem;
+  
+    .question {
+      margin-bottom: 2rem;
       background-color: rgba(255, 255, 255, 0.1);
       padding: 1rem;
-      border-radius: 10px;
+      border-radius: 12px;
     }
-    .question {
-      margin-bottom: 1.5rem;
+  
+    .question p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
+  
     button {
-      background-color: #e0e0e0;
+      background-color: #ffffff;
+      color: #000;
       border: none;
-      padding: 0.5rem 1rem;
-      margin-right: 0.5rem;
-      border-radius: 5px;
+      padding: 0.6rem 1.2rem;
+      margin: 0.4rem 0.5rem 0 0;
+      border-radius: 8px;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
+  
+    button:hover {
+      background-color: #f0f0f0;
+    }
+  
     .correct {
-      background-color: #4caf50;
+      background-color: #4caf50 !important;
       color: white;
     }
+  
     .incorrect {
-      background-color: #f44336;
+      background-color: #f44336 !important;
       color: white;
     }
-  </style>
+  
+    /* მობილურისთვის */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+  
+      .container {
+        margin: 1rem;
+        padding: 1.2rem;
+      }
+  
+      .question p {
+        font-size: 1.05rem;
+      }
+  
+      button {
+        width: 100%;
+        margin: 0.3rem 0;
+        padding: 0.8rem;
+        font-size: 1rem;
+      }
+    }
+  </style>  
 </head>
 <body>
   <header>
-    <h1>გერმანია</h1>
+    <h1>გერმანიის ქვიზი</h1>
   </header>
+
   <div class="container">
-    <h2>მდებარეობა</h2>
-    <p>გერმანია მდებარეობს ევროპაში, ცენტრალურ ნაწილში, და არის ყველაზე დიდი ქვეყანას ევროპულ რეგიონში, როგორც ტერიტორიულად, ისე მოსახლეობით. იგი მოცულია 357,022 კვადრატული კილომეტრით და შემოერთებულია სულ 9 ქვეყანასთან: დანია ჩრდილოეთიდან, პოლონეთი და ჩეხეთი აღმოსავლეთიდან, ავსტრია და შვეიცარია სამხრეთიდან, საფრანგეთი, ლუქსემბურგი, ბელგია და ნიდერლანდები დასავლეთიდან. გერმანიის ტერიტორია გარშემორტყმულია ჩრდილოეთისა და ბალტიის ზღვებით. მისი გეოგრაფიული მდებარეობა ძალზედ სტრატეგიულია, რაც ხელს უწყობს როგორც სავაჭრო, ისე კულტურულ ურთიერთობებს დანარჩენ ევროპასა და მსოფლიოსთან.
-    </p>
+    <h2>უპასუხე 10 კითხვას და გამოავლინე შენი ცოდნა გერმანიაზე!</h2>
 
-    <h2>რელიეფი და ბუნება</h2>
-    <p>გერმანიის რელიეფი მრავალფეროვანია, მასში არის სუსტად გ平ერილიცანი მინდვრები, მთები, მაღალი ზეგანებები და დაბლობები. ჩრდილოეთ გერმანია ძირითადად დაბლობია, სადაც ლანდშაფტი გლუვია და მასზე ვრცელდება ნაყოფიერი ვაკეები, რომლებიც მოიცავს ნეტარ ზემოთ მდებარე ნიადაგს. ცენტრალური გერმანია უფრო მთიანი რეგიონია, სადაც მთიანი ტერიტორიები გადაჭიმულია. ქვეყნის სამხრეთ ნაწილში დგას მაღალი ალპები, მათ შორის ბავარიის ალპები, სადაც არის ქვეყნის უმაღლესი მთა, Zugspitze, 2,962 მეტრი სიმაღლით.
-      გერმანიის ვაკეები განსაკუთრებით შორს გასწვდებიან ჩრდილოეთ და დასავლეთ ნაწილებში, რაც მძლავრ სასოფლო-სამეურნეო საქმიანობას უწყობს ხელს. ისინი გამოიყენება დიდი რაოდენობით პერფორმის, ხორბლისა და სხვა სასოფლო-სამეურნეო პროდუქტების მოყვანისთვის. ცხადია, ამ ადგილებში შედგება უმეტესობის მეურნეობის ძირითად პროდუცირებული პროდუქტი.
-      გერმანია ძალიან მდიდარია მთებით, როგორიცაა ბავარიის ალპები, გერლიცისა და სარაგონის მთები, რომლებიც ქმნიან სიმაღლის დიდი ვარიაციის ექსტრავაგანს. ყველაზე ცნობილი მთა - Zugspitze — არის ბავარიის რეგიონში მდებარეობს. ასევე, პეგლაუკის მთები, ეს 1750 მეტრი სიმაღლის, დამბოლ მთა მთა. გლობალური წყობა 9%
-    </p>
-
-    <h2>ბუნებრივი რესურსები</h2>
-    <p>გერმანია დიდი რესურსების მქონე ქვეყანა არ არის, თუმცა მას აქვს ბევრი მნიშვნელოვან სათავსო და მიწისქვეშა რესურსები. ყველაზე მნიშვნელოვანი რესურსები საქართველოში მოიცავს: ქვანახშირი, ბუნებრივი აირი, რკინა, თუთია, და მარილი. შავი ქვანახშირი, რომლის სახეობა განსაკუთრებით დომინირებს რეუირთის რაიონებში, ყოველთვის იყო გერმანიის ენერგეტიკული ინფრასტრუქტურის მნიშვნელოვანი ნაწილი.</p>
-
-    <h2>ჰავა</h2>
-    <p>გერმანია ახასიათებს ზომიერ კლიმატურ პირობებს, რომელიც გავლენას ახდენს ქვეყნის ჩრდილოეთით, სამხრეთით და ცენტრალურ ნაწილში. ქვეყნის ჰავა დამოკიდებულია ტერიტორიულ მდებარეობაზე: ჩრდილოეთ ნაწილში შეინიშნება მარსმიერი ზღვების გავლენა, რაც უზრუნველყოფს ზომიერ და ნესტიან ზამთარს და თბილი, მაგრამ ხშირად წვიმიან ზაფხულებს. ცენტრალური და აღმოსავლეთ გერმანიაში შევა უფრო კონტინენტური კლიმატი, სადაც ზამთარი უფრო ცივია, ხოლო ზაფხულში შეიძლება სითბო უფრო მწვავე იყოს. სამხრეთ გერმანიაში კლიმატი უფრო ალპურია, სადაც მაღალი მთები და ზაფხულში თბილი, ხოლო ზამთარში ძალიან ცივი და თოვლიანი ამინდია.</p>
-
-    <h2>მდინარეები და ტბები</h2>
-    <p>გერმანია მდინარეებით საკმაოდ მდიდარი ქვეყანაა. ყველაზე დიდი მდინარეები, რომლებიც გავლენას ახდენენ გერმანიის ეკონომიკაზე და კულტურაზე, არიან: რაინი, ელბა, დუნაი, და ოდერი. რაინი, 1,233 კმ სიგრძით, არის ერთ-ერთი მნიშვნელოვანი სავაჭრო რეჩის გაზრდილი ტრაფიკით, და ამას მოჰყვება დუნაის მდინარე. გერმანია ასევე აერთიანებს ლამაზ ტბებს, როგორიცაა კონსტანცის ტბა და ჰიმერზის ტბა. ამ ტბებზე აქტიურად კეთდება სარეკრაციო საქმიანობა, როგორიცაა ნავით სავალი ტურიზმი, თევზაობა და სხვა.</p>
-
-    <h2>ფლორა და ფაუნა</h2>
-    <p>გერმანია მდიდარია ბუნებრივი რესურსებით და ცოცხალი ორგანიზმებით. მისი ტყეები ძირითადად შედგება ჭალის, კურკისა და ჯავარის ტყეებისგან. ასევე, ალპების რეგიონებში შეგიძლიათ ნახოთ პინისა და სოჭის მსგავსი ხეები. რაც შეეხება ფაუნას, გერმანიაში არსებობენ მრავალი სახეობის ცხოველები, როგორიცაა ლამპარი, მგელი, მურა დათვი, იბერია, და ასევე, მრავალი მტაცებელი ფრინველი. ბოლო წლებში, გერმანიამ მიღო სხვადასხვა დაცული ტერიტორიების გეგმა, რათა დაეცვას სახეობათა მრავალფეროვნება.</p>
-
-    <h2>მოსახლეობა და მმართველობა</h2>
-    <p>გერმანიის მოსახლეობა 2021 წლის მონაცემებით დაახლოებით 83 მილიონ ადამიანს აერთიანებს, რაც მას ევროპაში ყველაზე ხალხმრავალ ქვეყანად აქცევს. მოსახლეობა ძირითადად კონცენტრირებულია ქალაქებში, როგორც მაგალითად, ბერლინი, მიუნხენი, ჰამბურგი, ფრანკფურტი და კოლონი. გერმანია არის ფედერალური რესპუბლიკა, რომელშიც პარლამენტი განასახიერებს კანონმდებლებლობითი ფუნქციებს, ხოლო პრეზიდენტი არის ცერემონიული სახელმწიფო მეთაური. ქვეყნის მთავრობა შედგება ბონდესტაგისა და კანცლერისგან, რომელთაც ძალიან დიდი როლი აქვთ პოლიტიკური გადაწყვეტილებების მიღებაში. კანცლერი არის ქვეყნის რეალური ლიდერი და ყველაზე მნიშვნელოვანი საჯარო პირი.</p>
-
-    <h2>საერთაშორისო ორგანიზაციები</h2>
-    <p>გერმანია ერთ-ერთი ყველაზე აქტიური ქვეყანა საერთაშორისო ორგანიზაციების რიგში. იგი წევრია ისეთ ორგანიზაციებში, როგორიცაა გაერო, ევროკავშირი, ნატო, G7, G20 და მსოფლიო სავაჭრო ორგანიზაცია. გერმანია ასრულებს მნიშვნელოვან როლს საერთაშორისო პოლიტიკასა და ეკონომიკაში, განსაკუთრებით ისეთ საკითხებში, როგორიცაა გარემოს დაცვა, გლობალური ვაჭრობა და ადამიანის უფლებები. ქვეყანას აქვს ძლიერი წარმომადგენლობა ევროკავშირში, რაც მას საშუალებას აძლევს მოახდინოს გავლენა ევროპის პოლიტიკური და ეკონომიკური გადაწყვეტილებების მიღებაზე.
-
-    </p>
-
-    <div class="quiz">
-      <h2>ქვიზი გერმანიაზე</h2>
-      <div class="question">
-        <p><strong>1. რომელი მდინარე არის გერმანიის ყველაზე გრძელი?</strong></p>
-        <button onclick="checkAnswer(this, true)">რაინი</button>
-        <button onclick="checkAnswer(this, false)">შპრეე</button>
-        <button onclick="checkAnswer(this, false)">ვეზერი</button>
-      </div>
-      <div class="question">
-        <p><strong>2. რამდენ ფედერაციულ მიწას მოიცავს გერმანია?</strong></p>
-        <button onclick="checkAnswer(this, false)">12</button>
-        <button onclick="checkAnswer(this, true)">16</button>
-        <button onclick="checkAnswer(this, false)">20</button>
-      </div>
-      <div class="question">
-        <p><strong>3. რომელი ქვეყანას არ ესაზღვრება გერმანია?</strong></p>
-        <button onclick="checkAnswer(this, false)">შვეიცარია</button>
-        <button onclick="checkAnswer(this, true)">პორტუგალია</button>
-        <button onclick="checkAnswer(this, false)">პოლონეთი</button>
-      </div>
+    <!-- Question 1 -->
+    <div class="question">
+      <p><strong>1. რომელ ქვეყანას არ ესაზღვრება გერმანია?</strong></p>
+      <button onclick="checkAnswer(this, false)">შვეიცარია</button>
+      <button onclick="checkAnswer(this, false)">ნიდერლანდები</button>
+      <button onclick="checkAnswer(this, true)">პორტუგალია</button>
     </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <p><strong>2. რამდენ ფედერაციულ მიწას მოიცავს გერმანია?</strong></p>
+      <button onclick="checkAnswer(this, false)">12</button>
+      <button onclick="checkAnswer(this, true)">16</button>
+      <button onclick="checkAnswer(this, false)">20</button>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+      <p><strong>3. რომელი მთაა ყველაზე მაღალი გერმანიაში?</strong></p>
+      <button onclick="checkAnswer(this, false)">ფუჯი</button>
+      <button onclick="checkAnswer(this, false)">პეგლაუკი</button>
+      <button onclick="checkAnswer(this, true)">ცუგშპიცე</button>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+      <p><strong>4. რომელია გერმანიის ყველაზე გრძელი მდინარე?</strong></p>
+      <button onclick="checkAnswer(this, true)">რაინი</button>
+      <button onclick="checkAnswer(this, false)">შპრეე</button>
+      <button onclick="checkAnswer(this, false)">ოდერი</button>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+      <p><strong>5. როგორია გერმანიის კლიმატი?</strong></p>
+      <button onclick="checkAnswer(this, true)">ზომიერი</button>
+      <button onclick="checkAnswer(this, false)">ტროპიკული</button>
+      <button onclick="checkAnswer(this, false)">უდაბნოს</button>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+      <p><strong>6. გერმანიის დედაქალაქია:</strong></p>
+      <button onclick="checkAnswer(this, true)">ბერლინი</button>
+      <button onclick="checkAnswer(this, false)">მიუნხენი</button>
+      <button onclick="checkAnswer(this, false)">ჰამბურგი</button>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+      <p><strong>7. გერმანიაში რომელი ენაა ოფიციალური?</strong></p>
+      <button onclick="checkAnswer(this, true)">გერმანული</button>
+      <button onclick="checkAnswer(this, false)">ინგლისური</button>
+      <button onclick="checkAnswer(this, false)">ფრანგული</button>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+      <p><strong>8. გერმანიის ეროვნული ფერები არის:</strong></p>
+      <button onclick="checkAnswer(this, true)">შავი, წითელი, ყვითელი</button>
+      <button onclick="checkAnswer(this, false)">ლურჯი, თეთრი, წითელი</button>
+      <button onclick="checkAnswer(this, false)">მწვანე, თეთრი, წითელი</button>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+      <p><strong>9. გერმანიაში გავრცელებული ცნობილი მანქანის ბრენდია:</strong></p>
+      <button onclick="checkAnswer(this, true)">BMW</button>
+      <button onclick="checkAnswer(this, false)">Toyota</button>
+      <button onclick="checkAnswer(this, false)">Hyundai</button>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+      <p><strong>10. რომელ ქალაქში იმართება ცნობილი ოქტობერფესტი?</strong></p>
+      <button onclick="checkAnswer(this, false)">ბერლინში</button>
+      <button onclick="checkAnswer(this, true)">მიუნხენში</button>
+      <button onclick="checkAnswer(this, false)">კიოლნში</button>
+    </div>
+
   </div>
 
   <script>
     function checkAnswer(button, isCorrect) {
-      const buttons = button.parentElement.querySelectorAll('button');
+      const buttons = button.parentElement.querySelectorAll("button");
       buttons.forEach(btn => btn.disabled = true);
-      if (isCorrect) {
-        button.classList.add('correct');
-      } else {
-        button.classList.add('incorrect');
-      }
+      button.classList.add(isCorrect ? "correct" : "incorrect");
     }
   </script>
 </body>
